@@ -9,6 +9,12 @@ CGame::CGame(){
 	tiempoFrameInicial = CERO;
 	tick = CERO;
 	atexit(SDL_Quit);
+
+	/*Animacion
+	translate_nave_x = -800;
+	translate_nave_y = 450;
+	translate_nave_z = -5.f;   
+	*/
 }
 
 void CGame::IniciandoVideo()
@@ -322,17 +328,18 @@ void CGame::MenuPintar()
 {
 	menuFondo->Draw();
 	textoTitulo->TranslateXYDraw(WIDTH_SCREEN / 8, 0);
+	//animacion
 
 	textoNombre->TranslateXY( WIDTH_SCREEN / 3, 450);//570
 	textoNombre->Draw();
 
-	textoOpcion1->TranslateXYDraw(320, 220);
-	textoOpcion2->TranslateXYDraw(320, 220 + 30);
+	textoOpcion1->TranslateXYDraw(220, 220);
+	textoOpcion2->TranslateXYDraw(220, 220 + 30);
 
 	if (opcionSeleccionada == MENU_OPCION1)
-		textoOpcion1Sel->TranslateXYDraw(320, 220);
+		textoOpcion1Sel->TranslateXYDraw(220, 220);
 	else
-		textoOpcion2Sel->TranslateXYDraw(320, 220 + 30);
+		textoOpcion2Sel->TranslateXYDraw(220, 220 + 30);
 
 }//void	
 
