@@ -9,7 +9,7 @@ void CGame::InicializandoStage(){
 	nivel[n].Enemigo_VelocidadBala = 1;
 	nivel[n].Nave_VelocidadBala = 1;
 	nivel[n].Enemigo_Velocidad = 2;
-	nivel[n++].Nave_Velocidad = 1;
+	nivel[n++].Nave_Velocidad = 5;
 	///1
 	nivel[n].Nave_BalasMaximas = 2;
 	nivel[n].Enemigo_EliminarPorNivel = 4;
@@ -17,7 +17,7 @@ void CGame::InicializandoStage(){
 	nivel[n].Enemigo_VelocidadBala = 2;
 	nivel[n].Nave_VelocidadBala = 2;
 	nivel[n].Enemigo_Velocidad = 2;
-	nivel[n++].Nave_Velocidad = 1;
+	nivel[n++].Nave_Velocidad = 10;
 	///2
 	nivel[n].Nave_BalasMaximas = 4;
 	nivel[n].Enemigo_EliminarPorNivel = 10;
