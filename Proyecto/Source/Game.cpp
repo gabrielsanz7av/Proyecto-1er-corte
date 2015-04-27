@@ -59,7 +59,7 @@ void CGame::CargandoObjetos()
 	textoOpcion1Sel = new Sprite(&openGlImplement, "Texto_Opcion1Sel", 0, 0);
 	textoOpcion2Sel = new Sprite(&openGlImplement, "Texto_Opcion2Sel", 0, 0);
 	nave = new Nave(&openGlImplement, "MiNave", (WIDTH_SCREEN / 2), (HEIGHT_SCREEN - 80), NAVE_PROPIA);
-	jugandoFondo = new Sprite(&openGlImplement, "Jugando", 0, 0);
+	jugandoFondo = new Sprite(&openGlImplement, "Jugando", 0, -320);
 	ganasteFondo = new Sprite(&openGlImplement, "Ganaste", 0, 0);
 	perdisteFondo = new Sprite(&openGlImplement, "Perdiste", 0, 0);
 
@@ -213,6 +213,12 @@ void CGame::JugandoPintar(){
 	jugandoFondo->Draw();
 	////////////////////////////////////////
 	//////// CONTROL DE COLISIONES /////////
+
+	jugandoFondo->translate_y += 1;
+	if (jugandoFondo->translate_y >= 5)
+	{
+		jugandoFondo->translate_y = -320;
+	}
 	for (int i = 0; i < nivel[nivelActual].Enemigos_VisiblesAlMismoTiempo; i++)
 	{
 		
