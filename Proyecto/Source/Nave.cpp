@@ -74,8 +74,10 @@ void Nave::Draw()
 			{
 			case NAVE_PROPIA:
 				nave->ScaleXYZ(5.f, 5.f, 5.f);
-				nave->rotate_x++;
-				nave->rotate_y = 90;
+				//nave->rotate_x++;
+		//		nave->rotate_y = 90;
+				//nave->rotate_y = 45;
+
 				
 					//nave->rotate_z++;
 				bala[i]->MoverArribaAbajo(-10);
